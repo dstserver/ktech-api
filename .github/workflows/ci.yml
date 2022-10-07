@@ -13,4 +13,4 @@ jobs:
         with:
           node-version: "16"
       - run: npm install
-      - run: PORT=8080 npm run build
+      - run: npm run build
