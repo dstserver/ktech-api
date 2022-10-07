@@ -11,7 +11,7 @@ describe("server", function () {
   it("/health", (done) => {
     supertest(server).get("/health").expect(200, done);
   });
-  it("404", (done) => {
+  it("not found", (done) => {
     supertest(server).get("/foobar").expect(404, done);
   });
 });
