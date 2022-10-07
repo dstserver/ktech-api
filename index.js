@@ -1,6 +1,5 @@
-import express from "express";
-
-const port = process.env.PORT,
+const express = require("express"),
+  port = process.env.PORT,
   app = express()
     .get("/health", (_, res) => {
       res.send("OK");
