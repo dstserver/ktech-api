@@ -1,6 +1,6 @@
 const express = require("express"),
   port = process.env.PORT,
-  app = express()
+  server = express()
     .get("/health", (_, res) => {
       res.send("OK");
     })
@@ -8,4 +8,4 @@ const express = require("express"),
       console.log(`listening on port ${port}`);
     });
 
-export default app;
+module.exports = server;
