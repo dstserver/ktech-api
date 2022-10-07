@@ -1,6 +1,6 @@
 import express from "express";
 
-const port = proces.env.PORT,
+const port = process.env.PORT,
   app = express()
     .get("/health", (_, res) => {
       res.send("OK");
