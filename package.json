@@ -1,9 +1,12 @@
 {
   "scripts": {
-    "build": "esbuild index.js --bundle --minify --platform=node --outfile=dist/index.js"
+    "build": "esbuild index.js --bundle --minify --platform=node --outfile=dist/index.js",
+    "build:test": "esbuild test.js --bundle --minify --platform=node --outfile=dist/test.js",
+    "test": "npm run build:test && node dist/test.js"
   },
   "devDependencies": {
     "esbuild": "latest",
-    "express": "latest"
+    "express": "latest",
+    "supertest": "latest"
   }
 }
