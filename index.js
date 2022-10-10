@@ -8,6 +8,7 @@ const express = require("express"),
     })
     .post("/png2tex", upload.single("file"), (req, res, next) => {
       console.log(req.file, req.body);
+      res.send("Done");
     })
     .listen(port, () => {
       console.log(`listening on port ${port}`);
