@@ -1,7 +1,5 @@
 const supertest = require("supertest");
 
-console.log("test macro");
-
 describe("server", function () {
   let server;
   beforeEach(() => {
