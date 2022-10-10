@@ -1,5 +1,6 @@
 const express = require("express"),
   multer = require("multer"),
+  { execSync } = require("child_process"),
   upload = multer({ dest: "/tmp/uploads/" }),
   port = process.env.PORT,
   server = express()
@@ -7,8 +8,8 @@ const express = require("express"),
       res.send("OK");
     })
     .post("/png2tex", upload.single("file"), (req, res, next) => {
-      console.log(req.file, req.body);
-      res.send("Done");
+      execSync(`./ktech ${req.file.path} /tmp/converted/`);
+      res.sendFile(`/tmp/converted/${req.file.path}.tex`);
     })
     .listen(port, () => {
       console.log(`listening on port ${port}`);
