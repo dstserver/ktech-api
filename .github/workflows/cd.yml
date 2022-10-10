@@ -17,4 +17,4 @@ jobs:
           ARGS: -avzr --delete
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: /home/${{ secrets.REMOTE_USER }}/${{ github.event.repository.name }}
+          TARGET: /home/${{ secrets.REMOTE_USER }}/${{ github.event.repository.name }}/pm2
