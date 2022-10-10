@@ -1,6 +1,6 @@
 const express = require("express"),
   multer = require("multer"),
-  upload = multer({ dest: "uploads/" }),
+  upload = multer({ dest: "/tmp/uploads/" }),
   port = process.env.PORT,
   server = express()
     .get("/health", (_, res) => {
