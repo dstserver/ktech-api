@@ -9,7 +9,7 @@ const express = require("express"),
     })
     .post("/png2tex", upload.single("file"), (req, res, next) => {
       execSync(`./ktech ${req.file.path} /tmp/converted/`);
-      res.sendFile(`/tmp/converted/${req.file.path}.tex`);
+      res.sendFile(`/tmp/converted/${req.file.filename}.tex`);
     })
     .listen(port, () => {
       console.log(`listening on port ${port}`);
