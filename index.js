@@ -6,7 +6,7 @@ const express = require("express"),
     .get("/health", (_, res) => {
       res.send("OK");
     })
-    .post("png2tex", upload.single("file"), (req, res, next) => {
+    .post("/png2tex", upload.single("file"), (req, res, next) => {
       console.log(req.file, req.body);
     })
     .listen(port, () => {
